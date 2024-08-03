@@ -1,5 +1,9 @@
 import { Register } from "./pages/Register";
 import { Login } from "./pages/Login";
+import { Appointment } from "./pages/Appointment";
+import { ProfileInformation } from "./pages/ProfileInformation";
+import { Dashboard } from "./pages/Dashboard";
+import { SuccessfullAppointment } from "./pages/SuccessfullAppointment";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -7,24 +11,28 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 function App() {
     const router = createBrowserRouter([
         {
-            path: "/",
+            path: "/register",
             element: <Register />,
         },
         {
-            path: "/login",
+            path: "/",
             element: <Login />
         },
         {
-            // Appointment
+            path: "/appointment",
+            element: <Appointment />
         },
         {
-            // Profile Information
+            path: "/profile-information",
+            element: <ProfileInformation />
         },
         {
-            // Dashboard
+            path: "/dashboard",
+            element: <Dashboard />
         },
         {
-            // Successfull Appointment
+            path: "/appointment/success",
+            element: <SuccessfullAppointment />
         },
 
     ]);
