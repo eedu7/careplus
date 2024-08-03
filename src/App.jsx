@@ -19,6 +19,9 @@ function App() {
             element: <Login />
         },
         {
+            // TODO: Create a home page
+        },
+        {
             path: "/appointment",
             element: <Appointment />
         },
