@@ -21,7 +21,7 @@ export const Register = () => {
         <img
           src={OnBoardImg}
           alt="Logo"
-          className="w-3/6 object-cover rounded-lg"
+          className="w-3/6 sm:w-4/6 md:w-4/6 lg:w-3/6 object-cover rounded-lg"
         />
       </div>
     </main>
