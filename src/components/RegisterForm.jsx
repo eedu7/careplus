@@ -1,6 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import { UserIcon, EmailIcon, PhoneIcon } from "../utils";
 
 export const RegisterForm = () => {
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/profile-information")
+  }
   return (
     <>
       <form className="h-full w-full flex flex-col justify-center">
@@ -55,7 +62,8 @@ export const RegisterForm = () => {
           </div>
         </div>
         <button
-          type="submit"
+        type="submit"
+        onClick={() => handleClick()}
           className="w-3/6 lg:w-3/6 sm:w-full md:w-full my-1 mt-4 bg-green-500 h-12 rounded-lg font-bold tracking-wider hover:bg-green-700"
         >
           Get Started
