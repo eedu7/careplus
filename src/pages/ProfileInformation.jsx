@@ -2,6 +2,8 @@ import { IdentificationForm } from "../components/IdentificationForm";
 import { MedicalInformationForm } from "../components/MedicalInformation";
 import { PersonalInformationForm } from "../components/PersonalInformationForm";
 import { LogoFull, PatientInformationForm } from "../utils";
+import { ConsentForm } from "../components/ConsentForm";
+
 
 export const ProfileInformation = () => {
   return (
@@ -23,6 +25,9 @@ export const ProfileInformation = () => {
             <MedicalInformationForm />
 
             <IdentificationForm />
+
+            <ConsentForm />
+
             <div className="flex justify-center">
                 <button className="bg-green-500 p-2 rounded-lg w-2/4">Submit</button>
             </div>

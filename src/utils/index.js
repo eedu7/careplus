@@ -9,6 +9,7 @@ import workCard from "/assets/icons/work-card.svg";
 import address from "/assets/icons/address.svg";
 import calendar from "/assets/icons/calendar.svg";
 import doctorRemirez from "/assets/images/dr-remirez.png";
+import upload from "/assets/icons/upload.svg";
 
 export default logoIcon;
 export const LogoFull = logoFull;
@@ -22,5 +23,6 @@ export const PhoneIcon = phone;
 export const WorkCardIcon = workCard;
 export const AddressIcon = address;
 export const CalendarIcon = calendar;
+export const UploadIcon = upload;
 
 export const DrAdamRemirezPic = doctorRemirez;
