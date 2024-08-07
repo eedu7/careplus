@@ -1,47 +1,20 @@
-import { Register } from "./pages/Register";
-import { Login } from "./pages/Login";
-import { Appointment } from "./pages/Appointment";
-import { ProfileInformation } from "./pages/ProfileInformation";
-import { Dashboard } from "./pages/Dashboard";
-import { SuccessfullAppointment } from "./pages/SuccessfullAppointment";
-
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
+import React from "react";
+import { LoginPage } from "./pages/LoginPage";
+import { RegisterPage } from "./pages/RegisterPage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { NotFoundPage } from "./pages/NotFoundPage";
 
 function App() {
-    const router = createBrowserRouter([
-        {
-            path: "/register",
-            element: <Register />,
-        },
-        {
-            path: "/login",
-            element: <Login />
-        },
-        {
-            // TODO: Create a home page
-        },
-        {
-            path: "/appointment",
-            element: <Appointment />
-        },
-        {
-            path: "/profile-information",
-            element: <ProfileInformation />
-        },
-        {
-            path: "/dashboard",
-            element: <Dashboard />
-        },
-        {
-            path: "/appointment/success",
-            element: <SuccessfullAppointment />
-        },
-
-    ]);
-
   return (
-    <RouterProvider router={router} />
+    <React.Fragment>
+      <Router>
+        <Routes>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Router>
+    </React.Fragment>
   );
 }
 
