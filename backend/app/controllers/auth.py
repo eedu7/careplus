@@ -36,10 +36,13 @@ class AuthController(BaseController[User]):
             }
         )
 
-    async def login(self, email: EmailStr, password: str) -> Token:
-        user = await self.user_repository.get_by_email(email)
+    async def login(self, full_name: str, phone_number: str) -> Token:
+        user = await self.user_repository.get_by_phone_number(phone_number)
 
         if not user:
+            raise BadRequestException("Invalid credentials")
+
+        if not user.full_name == full_name:
             raise BadRequestException("Invalid credentials")
 
         return Token(

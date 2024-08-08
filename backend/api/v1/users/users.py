@@ -1,5 +1,3 @@
-from typing import Callable
-
 from fastapi import APIRouter, Depends
 
 from app.controllers import AuthController, UserController
@@ -36,14 +34,14 @@ async def register_user(
     )
 
 
-# @user_router.post("/login")
-# async def login_user(
-#     login_user_request: LoginUserRequest,
-#     auth_controller: AuthController = Depends(Factory().get_auth_controller),
-# ) -> Token:
-#     return await auth_controller.login(
-#         email=login_user_request.email, password=login_user_request.password
-#     )
+@user_router.post("/login")
+async def login_user(
+    login_user_request: LoginUserRequest,
+    auth_controller: AuthController = Depends(Factory().get_auth_controller),
+) -> Token:
+    return await auth_controller.login(
+        full_name=login_user_request.full_name, phone_number=login_user_request.phone_number
+    )
 
 
 @user_router.get("/me", dependencies=[Depends(AuthenticationRequired)])

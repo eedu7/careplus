@@ -16,3 +16,4 @@ class User(Base, TimestampMixin):
     email = Column(Unicode(255), nullable=False, unique=True)
     phone_number = Column(Unicode(255), nullable=False)
     is_admin = Column(Boolean, default=False)
+
