@@ -16,8 +16,10 @@ pydantic = "^2.8.2"
 pydantic-settings = "^2.4.0"
 pydantic-extra-types = "^2.9.0"
 phonenumbers = "^8.13.42"
-python-jose = "^3.3.0"
 python-dotenv = "^1.0.1"
+alembic = "^1.13.2"
+stubs = "^1.0.0"
+pyjwt = "^2.9.0"
 
 
 [build-system]
